@@ -18,7 +18,7 @@ function create_post_type()
 			),
 			'public' => true,
 			'menu_position' => 5,
-			'has_archive' => true,
+			// 'has_archive' => true,
 			'show_in_rest' => true,
 			'hierarchical' => true,
 			'taxonomies' => ['custom_taxonomy'],
@@ -80,4 +80,3 @@ function create_taxonomy()
 	);
 }
 add_action('init', 'create_taxonomy');
-
