@@ -8,7 +8,7 @@ get_template_part('includes/header');
 		<div class="p-mv">
 			<div class="p-mv__inner">
 				<div class="p-mv__text-block">
-					<h1 class="p-mv__main-title">index.php</h1>
+					<h1 class="p-mv__main-title">TOEFL対策はEngress</h1>
 					<p class="p-mv__desc">
 						日本人へのTOEFL指導歴豊かな講師陣の<br>
 						コーチング型TOEFLスクール

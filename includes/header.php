@@ -38,12 +38,12 @@
 					</p>
 				</div>
 				<div class="l-header__cv">
-					<a href="contact" class="l-header__cv__item">
+					<a href="/contact" class="l-header__cv__item">
 						<span class="l-header__cv__text">
 							資料請求
 						</span>
 					</a>
-					<a href="contact" class="l-header__cv__item">
+					<a href="/contact" class="l-header__cv__item">
 						<span class="l-header__cv__text">
 							お問い合わせ
 						</span>
