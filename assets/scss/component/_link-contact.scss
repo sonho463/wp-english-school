@@ -1,0 +1,11 @@
+@use "../foundation/variables" as v;
+
+.c-link-contact {
+  margin-top: 22px;
+	text-decoration: underline;
+	cursor: pointer;
+	color: v.$color-white;
+	&:hover{
+		text-decoration: none;;
+	}
+}

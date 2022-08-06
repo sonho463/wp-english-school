@@ -1,0 +1,37 @@
+@use "../foundation/variables" as v;
+
+.p-archive-news {
+	.c-inner{
+		@include v.mq(lg){
+			padding-right: 5%;
+			padding-left: 5%;
+		}
+	}
+  &__information {
+    margin-top: 45px;
+  }
+	&__information__item{
+		height: 63px;
+		border-top: 1px solid v.$color-pale-gray-2;
+		&:last-of-type{
+			border-bottom: 1px solid v.$color-pale-gray-2;
+		}
+	}
+  &__information__item a {
+    display: flex;
+		align-items: center;
+		height: 100%;
+  }
+  &__information__date {
+		width: 136px;
+  }
+  &__information__title {
+		flex: 1;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow:ellipsis;
+  }
+  .c-pagination {
+    margin-top: 65px;
+  }
+}

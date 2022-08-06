@@ -1,0 +1,103 @@
+@use "../foundation/variables" as v;
+
+.l-footer {
+  position: relative;
+  width: 100%;
+}
+
+.l-footer__inner {
+  height: 300px;
+  background-color: v.$main-primary;
+  color: v.$color-white;
+  @include v.mq(lg) {
+    padding: 30px 5%;
+    height: auto;
+  }
+  .c-inner {
+    display: flex;
+    justify-content: space-between;
+    @include v.mq(lg) {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+.l-footer__menu {
+  padding-top: 49px;
+  @include v.mq(lg) {
+    padding-top: 0;
+  }
+  &__inner {
+    height: auto;
+    min-height: 23px;
+    display: flex;
+    @include v.mq(lg) {
+      flex-direction: column;
+    }
+  }
+  &__item {
+    padding-right: 21px;
+    @include v.mq(lg) {
+      padding-right: 0;
+    }
+  }
+  &__item + li {
+    border-left: solid 1px v.$color-white;
+    padding-left: 21px;
+    @include v.mq(lg) {
+      margin-top: 4px;
+      padding-left: 0;
+      border: none;
+    }
+  }
+}
+
+.l-footer__right {
+  padding-top: 35px;
+  @include v.mq(lg) {
+    padding-top: 0;
+  }
+}
+
+.l-footer__logo {
+  @include v.mq(lg) {
+    width: 67%;
+  }
+}
+
+.l-footer__info {
+  margin-top: 27px;
+  text-align: right;
+  @include v.mq(lg) {
+    text-align: left;
+    margin-top: 10px;
+  }
+}
+.l-footer__info__tel {
+  font-weight: bold;
+  &::before {
+    content: "";
+    display: inline-block;
+    margin-right: 5px;
+    width: 10px;
+    height: 14px;
+    background-image: url(../assets/images/tel-white.svg);
+  }
+}
+.l-footer__info__time {
+  margin-top: 13px;
+  font-size: 1.2rem;
+  @include v.mq(lg) {
+    margin-top: 4px;
+  }
+}
+
+.l-footer__bottom {
+  font-weight: bold;
+  text-align: right;
+  padding-top: 12px;
+  padding-bottom: 11px;
+  @include v.mq(lg) {
+    padding: 12px 5%;
+  }
+}

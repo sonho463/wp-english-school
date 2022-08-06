@@ -1,0 +1,71 @@
+@use "../foundation/variables" as v;
+
+.l-intro {
+  background-color: v.$main-primary;
+  color: v.$color-white;
+  padding-top: 63px;
+  padding-bottom: 54px;
+}
+
+.p-intro__sympathy {
+  &__contents {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 61%;
+    margin-top: 65px;
+    margin-left: auto;
+    margin-right: auto;
+    @include v.mq(lg) {
+      display: block;
+			margin-top: 32px;
+    }
+  }
+  &__item {
+    line-height: 2;
+    text-align: center;
+    @include v.mq(lg) {
+      text-align: center;
+    }
+  }
+}
+
+.p-intro__sympathy__heading {
+  color: v.$color-white;
+}
+
+.p-intro__intro {
+  margin-top: 83px;
+  padding: 11px 16px;
+  background-color: v.$color-white;
+  &__inner {
+    outline: v.$main-primary 5px solid;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__heading {
+    position: relative;
+  }
+  &__heading span::after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    bottom: 12px;
+    display: block;
+    height: 9px;
+    width: 84%;
+    background-color: v.$main-secondary;
+  }
+  &__desc {
+    text-align: center;
+    margin-top: 25px;
+    color: v.$main-primary;
+    @include v.mq(lg) {
+      text-align: justify;
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+  }
+}

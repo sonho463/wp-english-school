@@ -1,0 +1,141 @@
+@use "../foundation/variables" as v;
+
+
+
+.c-post {
+  &__category {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 110px;
+    height: 30px;
+    background-color: v.$main-primary;
+    color: v.$color-white;
+  }
+  &__title {
+    margin-top: 30px;
+    font-size: 2.8rem;
+    font-weight: bold;
+  }
+  &__info-block {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__image {
+    margin-top: 22px;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.c-post__article {
+  margin-top: 40px;
+  h2 {
+    font-size: 2.6rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  h3 {
+    padding-left: 15px;
+    margin-bottom: 27px;
+    font-size: 2.2rem;
+    font-weight: bold;
+    border-left: 4px solid v.$main-primary;
+  }
+  > p {
+    font-size: 1.6rem;
+    margin-bottom: 50px;
+  }
+  blockquote {
+    padding: 30px 5%;
+    margin-bottom: 30px;
+    font-size: 1.6rem;
+    background-color: v.$color-pale-gray;
+    display: flex;
+    align-items: flex-start;
+    &::before {
+      content: "";
+      display: block;
+      margin-right: 20px;
+      width: 60px;
+      height: 60px;
+      background-image: url(../assets/images/quote-mark.png);
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
+  }
+  .c-post__block-image {
+    margin-bottom: 30px;
+    img {
+      width: 100%;
+    }
+  }
+
+  ul {
+    margin-bottom: 60px;
+    padding-left: 1em;
+  }
+  li {
+    list-style-type: "●";
+    padding-left: 21px;
+    &::marker {
+      color: v.$main-secondary;
+    }
+  }
+  a {
+    color: v.$main-secondary;
+  }
+}
+
+.p-single-blog__recommend {
+  margin-top: 60px;
+	.c-info__blog__list{
+		@include v.mq(lg){
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		max-width: 500px;
+		margin-right: auto;
+		margin-left: auto;
+		}
+	}
+}
+
+.p-single-blog__aside__heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  height: 63px;
+  background-color: v.$main-primary;
+  color: v.$color-white;
+}
+
+.p-single-blog__related {
+  .c-info__blog__item {
+    height: fit-content;
+
+  }
+  .c-info__blog__image {
+    width: 100px;
+		@include v.mq(lg){
+			width: 100%;
+		}
+  }
+  .c-info__blog__title {
+    font-size: 1.2rem;
+  }
+}
+
+.p-single-blog__category {
+  margin-top: 62px;
+  &__list {
+    line-height: 2;
+  }
+  &__item {
+    list-style: disc inside;
+  }
+}

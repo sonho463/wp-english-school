@@ -1,0 +1,25 @@
+@use "../foundation/variables" as v;
+
+.p-single-news{
+	margin-top: 60px;
+	@include v.mq(lg){
+	padding-right: 5%;
+	padding-left: 5%;
+	}
+	.c-post__date{
+		margin-top: 30px;
+		text-align: right;
+	}
+	.c-post__article{
+		.c-post__block-image{
+			width: 45%;
+			@include v.mq(lg){
+				width: 70%;
+			}
+		}
+	}
+	blockquote::before{
+		width: 40px;
+		height: 40px;
+	}
+}

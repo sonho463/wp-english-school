@@ -1,0 +1,21 @@
+@use "../foundation/variables" as v;
+
+// それぞれの場所で囲む要素で設定する項目
+// border-radius, overflow:hidden, width,height
+.c-button{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: v.$main-secondary;
+	color: v.$color-white;
+	width: inherit;
+	height: inherit;
+	border-radius: 100vh;
+	&--transparent-bg{
+		background-color: transparent;
+		border: 1px v.$color-white solid;
+	}
+	&__text{
+		font-weight: bold;
+	}
+}

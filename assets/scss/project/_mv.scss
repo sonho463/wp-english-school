@@ -1,0 +1,44 @@
+@use "../foundation/variables" as v;
+
+.p-mv {
+  color: v.$color-white;
+  height: inherit;
+  &__inner {
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  &__text-block {
+    text-align: center;
+  }
+  &__main-title {
+    font-size: 4.8rem;
+    font-weight: bold;
+    @include v.mq(lg) {
+      font-size: 3.2rem;
+    }
+  }
+  &__desc {
+    font-size: 1.8rem;
+    @include v.mq(lg) {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.p-mv {
+  &__button {
+    display: inline-block;
+    margin-top: 51px;
+    height: 60px;
+    width: 260px;
+    @include v.mq(lg) {
+      height: 40px;
+    }
+  }
+  &__link-contact {
+    margin-top: 22px;
+  }
+}

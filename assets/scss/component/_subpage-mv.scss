@@ -1,0 +1,22 @@
+@use "../foundation/variables" as v;
+
+.c-subpage-mv{
+	height: 221px;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.c-subpage-mv--page-price{
+	background-image: url(../assets/images/mv-price.jpg);
+}
+.c-subpage-mv--archive-blog{
+	background-image: url(../assets/images/mv-blog.jpg);
+}
+.c-subpage-mv--archive-news{
+	background-image: url(../assets/images/mv-news.jpg);
+}
+.c-subpage-mv--page-contact{
+	background-image: url(../assets/images/cta-image.jpg);
+}

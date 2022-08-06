@@ -1,0 +1,15 @@
+@use "../foundation/variables" as v;
+
+.u-active-sp {
+  display: none;
+  @include v.mq(lg) {
+    display: inline;
+  }
+}
+
+.u-active-pc {
+  display: inline;
+  @include v.mq(lg) {
+    display: none;
+  }
+}

@@ -1,0 +1,167 @@
+@use "../foundation/variables" as v;
+
+.l-header {
+  height: 80px;
+  padding-right: 2%;
+  padding-left: 2%;
+  @include v.mq(lg) {
+    height: 56px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.l-header__inner,
+.l-header__left,
+.l-header__right {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include v.mq(lg) {
+    width: 100%;
+  }
+}
+
+.l-header__right {
+  @include v.mq(lg) {
+    display: none;
+    position: absolute;
+    top: 56px;
+  }
+}
+
+.l-header__logo {
+  width: 136px;
+}
+
+.l-header__info {
+  text-align: right;
+  &__time {
+    font-size: 1.2rem;
+  }
+  &__tel {
+    font-weight: bold;
+  }
+  &__tel::before {
+    content: "";
+    display: inline-block;
+    margin-right: 5px;
+    width: 10px;
+    height: 14px;
+    background-image: url(../assets/images/tel.svg);
+  }
+}
+
+.l-header__cv {
+  margin-left: 23px;
+  color: v.$color-white;
+  &__item {
+    display: inline-block;
+    height: 50px;
+    width: 137px;
+    border-radius: 5px;
+    text-align: center;
+    & + a {
+      margin-left: 10px;
+    }
+    &:first-of-type {
+      background-color: v.$main-secondary;
+    }
+    &:last-of-type {
+      background-color: v.$main-primary;
+    }
+  }
+  &__text {
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 50px;
+  }
+}
+
+@include v.mq(lg) {
+  .l-header.nav-open {
+    .l-header__left {
+      height: unset;
+    }
+    .l-header__right {
+      display: block;
+      position: absolute;
+      top: 40vh;
+      left: 0;
+      height: 100vh;
+      width: 100vw;
+      text-align: center;
+    }
+    .l-header__info {
+      text-align: center;
+			&__time{
+				font-size: 2rem;
+			}
+			&__tel{
+				font-size: 3.2rem;
+				display: flex;
+				width: 100%;
+				justify-content: center;
+				align-items: center;
+				&::before{
+					height: 32px;
+					width: 20px;
+					background-size: 100%;
+					background-repeat: no-repeat;
+
+				}
+			}
+
+    }
+		.l-header__cv{
+			margin-left: 0;
+			margin-top: 24px;
+		}
+    .p-g-nav {
+      display: block;
+    }
+  }
+}
+.hamburger {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  display: none;
+  @include v.mq(lg) {
+    display: flex;
+  }
+  &__line {
+    display: block;
+    width: 90%;
+    height: 2px;
+    background-color: v.$color-black;
+    &:first-of-type {
+      transform: translateY(-5px);
+      transition: transform 0.3s;
+    }
+    &:last-of-type {
+      transform: translateY(5px);
+      transition: transform 0.3s;
+    }
+  }
+  &__line--black {
+    background-color: v.$color-black;
+  }
+}
+
+.l-header.nav-open .hamburger__line{
+	&:first-of-type {
+		transform: translateY(2px) rotate(495deg);
+		transition: transform 0.3s;
+	}
+	&:nth-of-type(2){
+		opacity:0;
+		transition: .3s;
+	}
+	&:last-of-type {
+		transform: translateY(-2px) rotate(-135deg);
+		transition: transform 0.3s;
+	}
+}

@@ -1,0 +1,99 @@
+@use "../foundation/variables" as v;
+.l-feature {
+  padding-top: 59px;
+  padding-bottom: 39px;
+}
+
+.p-feature__articles {
+  margin-top: 59px;
+}
+
+.p-feature__article {
+  &__heading {
+    // margin-top: 45px;
+    font-weight: bold;
+    font-size: 2.6rem;
+    line-height: 1.5;
+  }
+  &__desc {
+    // margin-top: 39px;
+    font-size: 1.6rem;
+    line-height: 1.68;
+  }
+}
+
+.p-feature__item {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 50px;
+  @include v.mq(lg) {
+    display: block;
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+  & + li {
+    margin-top: 60px;
+  }
+  &:nth-of-type(even) {
+    flex-direction: row-reverse;
+  }
+  &__text-block {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__image {
+    // width: 27.3%;
+    width: 350px;
+		@include v.mq(lg){
+			width: 100%;
+		}
+    img {
+      max-width: unset;
+      width: 100%;
+    }
+  }
+}
+
+.p-feature__tag {
+  display: block;
+  width: 90px;
+  height: 30px;
+  background-color: v.$main-secondary;
+  text-align: center;
+  line-height: 30px;
+  font-size: 1.2rem;
+  color: v.$color-white;
+}
+
+.p-feature__link-price {
+  margin-top: 93px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 25px;
+  background-image: url(../assets/images/price.jpg);
+  background-size: 100%;
+  color: v.$color-white;
+  height: 217px;
+  @include v.mq(lg) {
+    height: 120px;
+    row-gap: 10px;
+  }
+  &__heading {
+    font-size: 2.6rem;
+    font-weight: bold;
+    @include v.mq(lg) {
+      font-size: 1.8rem;
+    }
+  }
+}
+.p-feature__button {
+  width: 200px;
+  height: 50px;
+  @include v.mq(lg) {
+    height: 38px;
+  }
+}

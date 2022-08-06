@@ -1,0 +1,74 @@
+@use "../foundation/variables" as v;
+
+.l-faq {
+  padding-top: 75px;
+}
+
+.p-faq__contents {
+  padding-top: 32px;
+}
+
+.p-faq__item {
+  border-top: v.$main-primary 1px solid;
+  &:last-of-type {
+    border-bottom: v.$main-primary 1px solid;
+  }
+  // height: 65px;
+  @include v.mq(lg) {
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+}
+
+.p-faq__question {
+  background-color: v.$color-white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: fit-content;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  cursor: pointer;
+  @include v.mq(lg) {
+    font-size: 1.4rem;
+  }
+  &::after {
+    content: "＋";
+    font-size: 2.5rem;
+    padding-right: 1%;
+    padding-left: 8%;
+  }
+}
+
+.p-faq__question.open{
+	&::after{
+		content:'ー';
+	}
+}
+
+.p-faq__answer {
+  background-color: v.$color-pale-gray;
+  // border-bottom: v.$main-primary 1px solid;
+  line-height: 65px;
+  height: 0px;
+  visibility: hidden;
+  opacity: 0;
+  max-height: 0;
+  transition: height 5s, visibility 0.2s, opacity 0.2s, max-height 1s;
+  transition-delay: height 1s;
+  line-height: 2;
+  &__text {
+    display: inline-block;
+    padding: 10px 5% 10px;
+    @include v.mq(lg) {
+      font-size: 1.4rem;
+    }
+  }
+}
+.p-faq__answer.open {
+  transition: height 5s, visibility 0.3s, opacity 0.3s, max-height 1s;
+  visibility: visible;
+  opacity: 1;
+  height: auto;
+  max-height: 100vh;
+}

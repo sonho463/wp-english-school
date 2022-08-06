@@ -1,0 +1,168 @@
+@use "../foundation/variables" as v;
+
+.p-page-price {
+  margin-top: 58px;
+  overflow-x: hidden;
+  .c-inner {
+    @include v.mq(lg) {
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+  }
+}
+
+.p-page-price__table-section {
+  margin-top: 90px;
+  @include v.mq(lg) {
+    margin-top: 60px;
+  }
+}
+
+.p-page-price__price {
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+
+  &__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: v.$main-primary;
+    color: v.$color-white;
+    width: 31%;
+    height: 90px;
+    font-size: 2.2rem;
+    font-weight: bold;
+    @include v.mq(lg) {
+      font-size: 1.6rem;
+      text-align: center;
+    }
+  }
+  img {
+    width: 19px;
+  }
+  &__desc {
+    margin-top: 46px;
+  }
+}
+
+.p-page-price__table-area {
+	position: relative;
+  @include v.mq(lg) {
+    overflow-x: scroll;
+  }
+}
+
+.p-page-price__table {
+  width: 100%;
+  margin-top: 106px;
+  border-collapse: separate;
+  border-spacing: 7px 0;
+  @include v.mq(lg) {
+    width: 1000px;
+  }
+  td {
+    border: 1px solid v.$main-primary;
+    width: 24%;
+    text-align: center;
+  }
+  tr:first-of-type {
+    height: 60px;
+    td {
+      position: relative;
+      border: none;
+      p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: absolute;
+        bottom: 0;
+        background-color: v.$main-primary;
+        color: v.$color-white;
+        width: 100%;
+        height: 100%;
+        border: 1px solid v.$main-primary;
+      }
+    }
+    td:nth-of-type(3) {
+      p {
+        border: 1px solid v.$main-secondary;
+        background-color: v.$main-secondary;
+        height: 160%;
+      }
+    }
+  }
+}
+
+td.p-page-price__table__price {
+  border-top: none;
+  border-bottom: none;
+  padding: 30px 0;
+  p:first-of-type {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  &:nth-of-type(3) {
+    p:first-of-type {
+      color: v.$main-secondary;
+    }
+  }
+}
+
+td.p-page-price__table__desc {
+  border-top: none;
+  padding-top: 21px;
+  height: 298px;
+}
+
+.p-page-price__table__desc__item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  line-height: 2;
+  &::before {
+    content: "";
+    margin-top: 10px;
+    margin-right: 12px;
+    display: inline-block;
+    background-image: url(../assets/images/check-mark.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 14px;
+    height: 9px;
+  }
+}
+
+// フレックスプランのリストマークはなし
+td.p-page-price__table__desc:last-of-type li::before {
+  display: none;
+}
+
+@include v.mq(lg){
+	.price-button-next {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		position: absolute;
+		z-index: 50;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		background-color: rgba(0, 0, 0, 0.6);
+		width: 80px;
+		height: 70px;
+		border-radius: 10px;
+		img {
+			width: 55px;
+		}
+		&::after {
+			font-size: 1rem;
+			content: "スクロール";
+			margin-top: -5px;
+			color: #fff;
+		}
+	}
+}

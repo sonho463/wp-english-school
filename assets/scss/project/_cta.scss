@@ -1,0 +1,49 @@
+@use "../foundation/variables" as v;
+
+.l-cta {
+  margin-top: 119px;
+  height: 17vw;
+  min-height: 256px;
+  max-height: 400px;
+  background-image: url(../assets/images/cta-image.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  @include v.mq(lg) {
+    height: 50vw;
+    min-height: unset;
+  }
+}
+
+.p-cta {
+  height: inherit;
+}
+
+.p-cta .c-inner {
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.p-cta__heading {
+  color: v.$color-white;
+  font-size: 3.2rem;
+  @include v.mq(lg) {
+    font-size: 2rem;
+  }
+}
+
+.p-cta__button {
+  width: 280px;
+  height: 50px;
+  margin-top: 16px;
+  @include v.mq(lg) {
+    width: 200px;
+    height: 36px;
+  }
+}
+
+.p-cta .c-link-contact {
+  margin-top: 22px;
+}

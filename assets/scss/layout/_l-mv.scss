@@ -1,0 +1,11 @@
+@use "../foundation/variables" as v;
+
+.l-mv {
+  background-image: url(../assets/images/fv.jpg);
+  background-size: cover;
+  height: 476px;
+  background-position-y: 50%;
+  @include v.mq(lg) {
+    height: 300px;
+  }
+}

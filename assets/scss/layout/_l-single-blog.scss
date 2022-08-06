@@ -1,0 +1,27 @@
+@use "../foundation/variables" as v;
+
+.l-single-blog {
+  &__container .c-inner {
+		margin-top: 60px;
+    display: flex;
+		gap: 36px;
+		@include v.mq(lg){
+			display: block;
+			padding-right: 5%;
+			padding-left: 5%;
+		}
+  }
+  &__main {
+		flex:1;
+  }
+  &__aside {
+		width: 30%;
+		min-width: 150px;
+		@include v.mq(lg){
+			width: 100%;
+			max-width: 500px;
+			margin-right: auto;
+			margin-left: auto;
+		}
+  }
+}

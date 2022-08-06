@@ -1,0 +1,116 @@
+@use "../foundation/variables" as v;
+
+.l-info {
+  margin-top: 90px;
+}
+
+.p-info__container {
+  display: flex;
+  > div {
+    flex: 1;
+  }
+  @include v.mq(lg) {
+    flex-direction: column;
+    padding-left: 5%;
+    padding-right: 5%;
+		max-width: 600px;
+		margin-right: auto;
+		margin-left: auto;
+  }
+}
+
+.p-info {
+  &__heading {
+    font-size: 3.2rem;
+    font-weight: bold;
+    padding-bottom: 30px;
+    border-top: 3px solid v.$main-primary;
+    @include v.mq(lg) {
+      padding-bottom: 8px;
+    }
+  }
+}
+
+// .p-info__blog {
+//   padding-right: 67px;
+//   @include v.mq(lg) {
+//     padding-right: 0;
+//   }
+//   &__item {
+//     height: 110px;
+//     @include v.mq(lg) {
+//       height: auto;
+//     }
+//   }
+//   &__item .c-info__blog__link {
+//     display: flex;
+//     @include v.mq(lg) {
+//       flex-direction: column;
+//     }
+//   }
+//   &__item + li {
+//     margin-top: 31px;
+//   }
+//   &__image-block {
+//     position: relative;
+//   }
+//   &__category {
+//     position: absolute;
+//     background-color: v.$main-primary;
+//     color: v.$color-white;
+//     font-size: 1.2rem;
+//     width: 78px;
+//     height: 23px;
+//     text-align: center;
+//     line-height: 23px;
+//   }
+//   &__image {
+//     width: 150px;
+//     @include v.mq(lg) {
+//       width: 100%;
+//     }
+//   }
+//   &__text-block {
+//     flex: 1;
+//     padding-left: 20px;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-between;
+//     @include v.mq(lg) {
+//       padding-left: 0;
+//       padding-top: 20px;
+//     }
+//   }
+//   &__title {
+//     height: 78px;
+//     overflow: hidden;
+// 		font-weight: bold;
+//   }
+//   &__date {
+//     margin-top: 4px;
+//   }
+// }
+
+.p-info__information {
+  @include v.mq(lg) {
+    margin-top: 56px;
+  }
+  &__item {
+    height: fit-content;
+    min-height: 87px;
+    @include v.mq(lg) {
+      min-height: 42px;
+    }
+    & + li {
+      margin-top: 17px;
+    }
+  }
+  &__date {
+    font-size: 1.2rem;
+  }
+  &__title {
+    margin-top: 6px;
+    height: 50px;
+    overflow: hidden;
+  }
+}

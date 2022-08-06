@@ -1,0 +1,38 @@
+@use "../foundation/variables" as v;
+
+.l-tel {
+  height: auto;
+  min-height: 80px;
+  @include v.mq(lg) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.p-tel {
+  text-align: center;
+  line-height: 80px;
+  @include v.mq(lg) {
+    line-height: 1.5;
+    span {
+      display: block;
+    }
+  }
+  &__heading {
+    font-weight: bold;
+  }
+  &__number {
+    margin-left: 20px;
+    font-size: 3.6rem;
+    font-weight: bold;
+    @include v.mq(lg) {
+      margin-left: 0;
+    }
+  }
+  &__time {
+    margin-left: 20px;
+    @include v.mq(lg) {
+      margin-left: 0;
+    }
+  }
+}

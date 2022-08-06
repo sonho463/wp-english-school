@@ -1,0 +1,85 @@
+@use "../foundation/variables" as v;
+
+.l-success {
+  background-color: v.$main-primary;
+  color: v.$color-white;
+  padding-top: 58px;
+  padding-bottom: 60px;
+}
+
+.p-success__heading {
+  color: v.$color-white;
+  font-weight: bold;
+}
+
+.p-success__list__inner {
+  display: flex;
+  gap: 30px;
+  @include v.mq(lg) {
+    flex-direction: column;
+  }
+}
+
+.p-success__list {
+  margin-top: 137px;
+  margin-left: auto;
+  margin-right: auto;
+  @include v.mq(lg) {
+    margin-top: 60px;
+  }
+}
+
+.p-success__item {
+  width: 30.9%;
+  @include v.mq(lg) {
+    width: 100%;
+		max-width: 500px;
+		margin-right: auto;
+		margin-left: auto;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  &__info {
+    margin-top: 16px;
+  }
+  &__info-row {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.p-success__item__heading {
+  line-height: 1.81;
+}
+
+.p-success__item__image {
+  margin-top: 10px;
+  img {
+    max-width: unset;
+    width: 100%;
+  }
+}
+
+.p-success__attr,
+.p-success__name,
+.p-success__outcome {
+  color: v.$main-primary;
+  background-color: v.$color-white;
+  height: 32px;
+  line-height: 32px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.p-success__attr {
+  width: 35.7%;
+}
+
+.p-success__name {
+  width: 61.4%;
+  // margin-left: 2.8%;
+}
+
+.p-success__outcome {
+  margin-top: 16px;
+}

@@ -1,0 +1,39 @@
+@use "../foundation/variables" as v;
+
+.p-g-nav {
+  margin-left: 20px;
+	margin-right: auto;
+  @include v.mq(lg) {
+		background-color: v.$color-white;
+    display: none;
+    padding-top: 56px;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-left: 0;
+		font-size: 3rem;
+		text-align: center;
+  }
+}
+
+@include v.mq(lg) {
+  .p-g-nav.nav-open {
+    display: block;
+  }
+}
+
+.p-g-nav__inner {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  gap: 23px;
+  @include v.mq(lg) {
+    display: block;
+  }
+}
+
+.p-g-nav__item + li {
+  // margin-left: 23px;
+}
