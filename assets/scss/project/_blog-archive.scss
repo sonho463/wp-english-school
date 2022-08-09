@@ -13,6 +13,7 @@
     &__item {
       height: fit-content;
       height: 180px;
+			overflow: hidden;
 			@include v.mq(lg){
 				height: auto;
 				max-width: 500px;
@@ -26,8 +27,25 @@
 				margin-top: 48px;
 			}
     }
+		&__link{
+			height: inherit;
+		}
+		&__image-block{
+			height: inherit;
+		}
+		&__category{
+			width: fit-content;
+			padding-left: 2%;
+			padding-right: 2%;
+		}
     &__image {
       width: 240px;
+			height: inherit;
+			img{
+				width: 100%;
+				height: 179px;
+				object-fit: cover;
+			}
 			@include v.mq(lg){
 				width: 100%;
 			}
