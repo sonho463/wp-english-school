@@ -39,7 +39,7 @@ get_template_part('includes/ddMenu');
 					<?php while (have_posts()) : the_post(); ?>
 						<ul class="p-archive-news__information__list">
 							<li class="p-archive-news__information__item">
-								<a href="/single-news.html">
+								<a href="<?php the_permalink(); ?>">
 									<p class="p-archive-news__information__date"><?php the_time('Y-m-d'); ?></p>
 									<p class="p-archive-news__information__title">
 										<?php the_title(); ?>

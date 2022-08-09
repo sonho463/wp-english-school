@@ -38,7 +38,7 @@ get_template_part('includes/header');
 					<ul class="c-info__blog__list">
 						<?php while (have_posts()) : the_post(); ?>
 							<li class="c-info__blog__item">
-								<a class="c-info__blog__link" href="/single-blog.html">
+								<a class="c-info__blog__link" href="<?php the_permalink(); ?>">
 									<div class="c-info__blog__image-block">
 										<span class="c-info__blog__category">
 											<?php

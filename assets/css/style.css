@@ -69,11 +69,16 @@ h6 {
 
 /* Lists (enumeration) */
 /* ============================================ */
-ul,
-ol {
+ul {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+ol {
+  margin: 0;
+  padding: 0;
+  list-style-position: inside;
 }
 
 /* Lists (definition) */
@@ -726,6 +731,7 @@ a:hover img {
 }
 .l-single-blog__main {
   flex: 1;
+  max-width: 70%;
 }
 .l-single-blog__aside {
   width: 30%;
@@ -2061,10 +2067,14 @@ td.p-page-price__table__desc:last-of-type li::before {
 }
 .c-post__image img {
   width: 100%;
+  max-width: 100%;
 }
 
 .c-post__article {
   margin-top: 40px;
+}
+.c-post__article * {
+  max-width: 100%;
 }
 .c-post__article h2 {
   font-size: 2.6rem;
@@ -2110,11 +2120,11 @@ td.p-page-price__table__desc:last-of-type li::before {
   margin-bottom: 60px;
   padding-left: 1em;
 }
-.c-post__article li {
+.c-post__article ul > li {
   list-style-type: "●";
   padding-left: 21px;
 }
-.c-post__article li::marker {
+.c-post__article ul > li::marker {
   color: #F5A623;
 }
 .c-post__article a {
