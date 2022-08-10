@@ -159,7 +159,7 @@ get_template_part('includes/header');
 											<?php
 											$image = get_field('image');
 											?>
-											<img src="<?php echo $image?>" alt="">
+											<img src="<?php echo $image ?>" alt="">
 										</figure>
 										<div class="p-success__item__info">
 											<div class="p-success__item__info-row">
@@ -296,75 +296,65 @@ get_template_part('includes/header');
 					<div class="c-info__blog">
 						<h2 class="p-info__heading">ブログ</h2>
 						<ul class="c-info__blog__list">
-							<li class="c-info__blog__item">
-								<a class="c-info__blog__link" href="">
+							<?php
+							$args = array(
+								'posts_per_page' => 3, // 表示件数の指定
+								'post_type' => 'post',
+							);
+							$posts = get_posts($args);
+							foreach ($posts as $post) : // ループの開始
+								setup_postdata($post); // 記事データの取得
+							?>
+								<li class="c-info__blog__item">
+									<a class="c-info__blog__link" href="<?php the_permalink(); ?>">
 
-									<div class="c-info__blog__image-block">
-										<span class="c-info__blog__category">カテゴリー</span>
-										<figure class="c-info__blog__image">
-											<img src="<?php echo get_template_directory_uri(); ?>/assets/images/sample01.jpg" alt="">
-										</figure>
-									</div>
-									<div class="c-info__blog__text-block">
-										<p class="c-info__blog__title">
-											Engress説明会in大阪の模様をお伝えします Engress説明会in大阪の模様をお伝えします Engress説明会in大阪の模様をお伝えします
-											Engress説明会in大阪の模様をお伝えします Engress説明会in大阪の模様をお伝えします Engress説明会in大阪の模様をお伝えします
-											Engress説明会in大阪の模様をお伝えします
-										</p>
-										<p class="c-info__blog__date">2020-12-27</p>
-									</div>
-								</a>
-							</li>
-							<li class="c-info__blog__item">
-								<a href="" class="c-info__blog__link">
+										<div class="c-info__blog__image-block">
+											<span class="c-info__blog__category">
+												<?php
+												$category = get_the_category();
+												echo $category[0]->cat_name;
+												?>
+											</span>
+											<figure class="c-info__blog__image">
+												<img src="<?php echo get_template_directory_uri(); ?>/assets/images/sample01.jpg" alt="">
+											</figure>
+										</div>
+										<div class="c-info__blog__text-block">
+											<p class="c-info__blog__title">
+												<?php the_title(); ?>
+											</p>
+											<p class="c-info__blog__date">
+												<?php the_time('Y-m-d') ?>
+											</p>
+										</div>
+									</a>
+								</li>
+							<?php endforeach; ?>
 
-									<div class="c-info__blog__image-block">
-										<span class="c-info__blog__category">
-											カテゴリー
-										</span>
-										<figure class="c-info__blog__image">
-											<img src="<?php echo get_template_directory_uri(); ?>/assets/images/sample02.jpg" alt="">
-										</figure>
-									</div>
-									<div class="c-info__blog__text-block">
-										<p class="c-info__blog__title">Engressもくもく会でみんなで　TOEFL学習をしませんか？</p>
-										<p class="c-info__blog__date">2020-12-01</p>
-									</div>
-								</a>
-							</li>
-							<li class="c-info__blog__item">
-								<a href="" class="c-info__blog__link">
-									<div class="c-info__blog__image-block">
-										<span class="c-info__blog__category">カテゴリー</span>
-										<figure class="c-info__blog__image">
-											<img src="<?php echo get_template_directory_uri(); ?>/assets/images/sample03.jpg" alt="">
-										</figure>
-									</div>
-									<div class="c-info__blog__text-block">
-										<p class="c-info__blog__title">TOEFL学習にはコーチング学習が最強である話</p>
-										<p class="c-info__blog__date">2020-11–20</p>
-									</div>
-								</a>
-							</li>
 						</ul>
 					</div>
 					<div class="p-info__information">
 						<h3 class="p-info__heading">お知らせ</h3>
 						<ul class="p-info__information__list">
-							<li class="p-info__information__item">
-								<p class="p-info__information__date">2020-12-01</p>
-								<p class="p-info__information__title">
-									2021年のスケジュールについて2021年のスケジュールについて2021年のスケジュールについて2021年のスケジュールについて2021年のスケジュールについて2021年のスケジュールについて2021年のスケジュールについて2021年のスケジュールについて
-								</p>
-							</li>
-							<li class="p-info__information__item">
-								<p class="p-info__information__date">2019-11-02</p>
-								<p class="p-info__information__title">11月休校日のお知らせ</p>
-							</li>
-							<li class="p-info__information__item">
-								<p class="p-info__information__date">2020-10-01</p>
-								<p class="p-info__information__title">10月休校日のお知らせ</p>
-							</li>
+							<?php
+							$args = array(
+								'posts_per_page' => 3, // 表示件数の指定
+								'post_type' => 'news',
+							);
+							$posts = get_posts($args);
+							foreach ($posts as $post) : // ループの開始
+								setup_postdata($post); // 記事データの取得
+							?>
+								<li class="p-info__information__item">
+									<p class="p-info__information__date">
+										<?php the_time('Y-m-d'); ?>
+									</p>
+									<p class="p-info__information__title">
+										<?php the_title(); ?>
+									</p>
+								</li>
+							<?php endforeach; ?>
+
 						</ul>
 					</div>
 				</div>
