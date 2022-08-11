@@ -30,9 +30,9 @@ get_template_part('includes/header');
 					<?php while (have_posts()) : the_post(); ?>
 						<section class="c-post">
 							<div class="c-post__inner">
+								<?php $category = get_the_category(); ?>
 								<div class="c-post__category">
 									<?php
-									$category = get_the_category();
 									echo $category[0]->cat_name;
 									?>
 								</div>
@@ -60,58 +60,52 @@ get_template_part('includes/header');
 						</section>
 					<?php endwhile; ?>
 				<?php endif; ?>
+				<?php wp_reset_postdata(); ?>
 				<section class="p-single-blog__recommend">
 					<div class="c-info__blog">
 						<h2 class="p-info__heading">おすすめの記事</h2>
+						<?php
+						$args = array(
+							'post_type' => 'post',
+							'posts_per_page' => '3', //表示させたい記事数
+							'post__not_in' => array($post->ID), //現在の記事は含めない
+							'tag' => 'pick-up', //先ほど取得したカテゴリー内の記事
+							// 'orderby' => 'rand' //ランダムで取得
+						);
+						$recommend_query = new WP_Query($args);
+						?>
 						<ul class="c-info__blog__list">
-							<li class="c-info__blog__item">
-								<a class="c-info__blog__link" href="">
-
-									<div class="c-info__blog__image-block">
-										<span class="c-info__blog__category">カテゴリー</span>
-										<figure class="c-info__blog__image">
-											<img src="./assets/images/sample01.jpg" alt="">
-										</figure>
-									</div>
-									<div class="c-info__blog__text-block">
-										<p class="c-info__blog__date">2020-12-27</p>
-										<p class="c-info__blog__title">
-											Engress説明会in大阪の模様をお伝えします Engress説明会in大阪の模様をお伝
-										</p>
-									</div>
-								</a>
-							</li>
-							<li class="c-info__blog__item">
-								<a href="" class="c-info__blog__link">
-
-									<div class="c-info__blog__image-block">
-										<span class="c-info__blog__category">
-											カテゴリー
-										</span>
-										<figure class="c-info__blog__image">
-											<img src="./assets/images/sample02.jpg" alt="">
-										</figure>
-									</div>
-									<div class="c-info__blog__text-block">
-										<p class="c-info__blog__date">2020-12-01</p>
-										<p class="c-info__blog__title">Engressもくもく会でみんなで　TOEFL学習をしませんか？</p>
-									</div>
-								</a>
-							</li>
-							<li class="c-info__blog__item">
-								<a href="" class="c-info__blog__link">
-									<div class="c-info__blog__image-block">
-										<span class="c-info__blog__category">カテゴリー</span>
-										<figure class="c-info__blog__image">
-											<img src="./assets/images/sample03.jpg" alt="">
-										</figure>
-									</div>
-									<div class="c-info__blog__text-block">
-										<p class="c-info__blog__date">2020-11–20</p>
-										<p class="c-info__blog__title">TOEFL学習にはコーチング学習が最強である話</p>
-									</div>
-								</a>
-							</li>
+							<?php if ($recommend_query->have_posts()) : ?>
+								<?php while ($recommend_query->have_posts()) : $recommend_query->the_post(); ?>
+									<li class="c-info__blog__item">
+										<a class="c-info__blog__link" href="<?php the_permalink(); ?>">
+											<div class="c-info__blog__image-block">
+												<span class="c-info__blog__category">
+													<?php
+													$category = get_the_category();
+													echo $category[0]->cat_name;
+													?>
+												</span>
+												<figure class="c-info__blog__image">
+													<?php if (has_post_thumbnail()) : ?>
+														<?php the_post_thumbnail(); ?>
+													<?php else : ?>
+														<img src="<?php echo get_template_directory_uri(); ?>/assets/images/default.png" alt="">
+													<?php endif; ?>
+												</figure>
+											</div>
+											<div class="c-info__blog__text-block">
+												<p class="c-info__blog__date">
+													<?php the_time('Y-m-d'); ?>
+												</p>
+												<p class="c-info__blog__title">
+													<?php the_title(); ?>
+												</p>
+											</div>
+										</a>
+									</li>
+								<?php endwhile; ?>
+							<?php endif; ?>
 						</ul>
 					</div>
 				</section>
@@ -177,7 +171,7 @@ get_template_part('includes/header');
 							echo '<li class="p-single-blog__category__item"><a href="' . get_category_link($category->term_id) . '">' . $category->name . '</a></li>';
 						}
 						?>
-						
+
 					</ul>
 				</section>
 			</aside>
