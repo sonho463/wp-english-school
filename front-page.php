@@ -347,12 +347,14 @@ get_template_part('includes/header');
 								setup_postdata($post); // 記事データの取得
 							?>
 								<li class="p-info__information__item">
-									<p class="p-info__information__date">
-										<?php the_time('Y-m-d'); ?>
-									</p>
-									<p class="p-info__information__title">
-										<?php the_title(); ?>
-									</p>
+									<a href="<?php the_permalink();?>">
+										<p class="p-info__information__date">
+											<?php the_time('Y-m-d'); ?>
+										</p>
+										<p class="p-info__information__title">
+											<?php the_title(); ?>
+										</p>
+								</a>
 								</li>
 							<?php endforeach; ?>
 
