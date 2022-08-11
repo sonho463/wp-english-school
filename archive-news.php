@@ -11,23 +11,9 @@ get_template_part('includes/ddMenu');
 		</h1>
 	</section>
 	<section class="c-breadcrumbs">
-		<ul class="c-breadcrumbs__list c-inner">
-			<li class="c-breadcrumbs__item">
-				<a href="/" class="c-breadcrumbs__link">
-					ホーム
-				</a>
-			</li>
-			<li class="c-breadcrumbs__item">
-				<a href="/" class="c-breadcrumbs__link">
-					お知らせ
-				</a>
-			</li>
-			<li class="c-breadcrumbs__item">
-				<a href="/" class="c-breadcrumbs__link">
-					お知らせ
-				</a>
-			</li>
-		</ul>
+		<?php
+		get_template_part('includes/breadcrumb');
+		?>
 	</section>
 	<section class="p-archive-news">
 		<div class="c-inner">

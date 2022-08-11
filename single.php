@@ -5,23 +5,9 @@ get_template_part('includes/header');
 
 <main class="l-main">
 	<section class="c-breadcrumbs">
-		<ul class="c-breadcrumbs__list c-inner">
-			<li class="c-breadcrumbs__item">
-				<a href="/" class="c-breadcrumbs__link">
-					ホーム
-				</a>
-			</li>
-			<li class="c-breadcrumbs__item">
-				<a href="/" class="c-breadcrumbs__link">
-					料金体系
-				</a>
-			</li>
-			<li class="c-breadcrumbs__item">
-				<a href="/" class="c-breadcrumbs__link">
-					料金体系
-				</a>
-			</li>
-		</ul>
+		<?php
+		get_template_part('includes/breadcrumb');
+		?>
 	</section>
 	<div class="l-single-blog__container p-single-blog">
 		<div class="c-inner">

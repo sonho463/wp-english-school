@@ -943,7 +943,10 @@ a:hover img {
 
 .c-breadcrumbs {
   background-color: #F8F8F8;
-  height: 50px;
+  height: auto;
+  min-height: 50px;
+  padding-top: 1%;
+  padding-bottom: 1%;
 }
 @media screen and (max-width:1024px) {
   .c-breadcrumbs {
@@ -952,7 +955,7 @@ a:hover img {
   }
 }
 
-.c-breadcrumbs__list {
+.c-breadcrumbs__list.c-inner {
   height: inherit;
   display: flex;
   align-items: center;

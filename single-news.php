@@ -4,24 +4,10 @@ get_template_part('includes/header');
 ?>
 
 <main class="l-main">
-	<section class="c-breadcrumbs">
-		<ul class="c-breadcrumbs__list c-inner">
-			<li class="c-breadcrumbs__item">
-				<a href="/" class="c-breadcrumbs__link">
-					ホーム
-				</a>
-			</li>
-			<li class="c-breadcrumbs__item">
-				<a href="/" class="c-breadcrumbs__link">
-					料金体系
-				</a>
-			</li>
-			<li class="c-breadcrumbs__item">
-				<a href="/" class="c-breadcrumbs__link">
-					料金体系
-				</a>
-		</li>
-		</ul>
+<section class="c-breadcrumbs">
+		<?php
+		get_template_part('includes/breadcrumb');
+		?>
 	</section>
 	<section class="p-single-news">
 		<div class="c-inner">
