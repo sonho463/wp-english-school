@@ -20,7 +20,7 @@ get_template_part('includes/header');
 				<a href="/" class="c-breadcrumbs__link">
 					料金体系
 				</a>
-			</li>
+		</li>
 		</ul>
 	</section>
 	<section class="p-single-news">

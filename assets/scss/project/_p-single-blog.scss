@@ -7,7 +7,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 110px;
+    width: fit-content;
+		padding-left: 2%;
+		padding-right: 2%;
     height: 30px;
     background-color: v.$main-primary;
     color: v.$color-white;
@@ -121,8 +123,12 @@
 .p-single-blog__related {
   .c-info__blog__item {
     height: fit-content;
-
   }
+	.c-info__blog__categpry{
+		width: fit-content;
+		padding-left: 2%;
+		padding-right: 2%;
+	}
   .c-info__blog__image {
     width: 100px;
 		@include v.mq(lg){

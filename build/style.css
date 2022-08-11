@@ -1108,10 +1108,13 @@ a:hover img {
   background-color: #1B224C;
   color: #fff;
   font-size: 1.2rem;
-  width: 78px;
+  padding-left: 2%;
+  padding-right: 2%;
   height: 23px;
   text-align: center;
   line-height: 23px;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 .c-info__blog__image {
   width: 150px;
@@ -2301,7 +2304,11 @@ td.p-page-price__table__desc:last-of-type li::before {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 110px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-left: 2%;
+  padding-right: 2%;
   height: 30px;
   background-color: #1B224C;
   color: #fff;
@@ -2437,6 +2444,13 @@ td.p-page-price__table__desc:last-of-type li::before {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+}
+.p-single-blog__related .c-info__blog__categpry {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-left: 2%;
+  padding-right: 2%;
 }
 .p-single-blog__related .c-info__blog__image {
   width: 100px;

@@ -14,10 +14,9 @@
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/build/style.css">
 	<title>English-school｜しょーごログコーディング教材上級</title>
 	<meta name="description" content="しょーごログ様が提供してくれているコーディング練習用教材をコーディング、WordPress化しました" />
-	<meta name="keywords" content="コーディング, 教材, WordPress" />
+<meta name="keywords" content="コーディング, 教材, WordPress" />
 	<meta name="robots" content="NOINDEX,NOFOLLOW" />
 
 </head>
 
 <body>
-
