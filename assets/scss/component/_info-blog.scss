@@ -27,10 +27,14 @@
     background-color: v.$main-primary;
     color: v.$color-white;
     font-size: 1.2rem;
-    width: 78px;
+    // width: 78px;
+		padding-left: 2%;
+		padding-right: 2%;
     height: 23px;
     text-align: center;
     line-height: 23px;
+		max-width: 100%;
+		overflow-x: hidden;
   }
   &__image {
     width: 150px;
