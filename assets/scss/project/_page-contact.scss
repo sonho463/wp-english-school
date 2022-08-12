@@ -34,7 +34,7 @@
   &__type-area {
     margin-top: 24px;
     &__desc {
-      margin-bottom: 21px;
+      // margin-bottom: 21px;
       span {
         font-weight: bold;
       }
@@ -52,6 +52,7 @@
   }
   &__textarea {
     display: block;
+		margin-bottom: 10px;
     + textarea {
       display: block;
       width: 100%;
@@ -61,6 +62,17 @@
       font-size: 2rem;
     }
   }
+}
+
+.mwform-radio-field > label{
+	display: flex;
+	align-items: center;
+	line-height: 2;
+	input[type="radio"] {
+		width: 20px;
+		height: 20px;
+		margin-right: 20px;
+	}
 }
 
 .p-page-contact__consent {

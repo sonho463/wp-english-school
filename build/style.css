@@ -2573,9 +2573,6 @@ td.p-page-price__table__desc:last-of-type li::before {
 .p-page-contact__form__type-area {
   margin-top: 24px;
 }
-.p-page-contact__form__type-area__desc {
-  margin-bottom: 21px;
-}
 .p-page-contact__form__type-area__desc span {
   font-weight: bold;
 }
@@ -2595,6 +2592,7 @@ td.p-page-price__table__desc:last-of-type li::before {
 }
 .p-page-contact__form__textarea {
   display: block;
+  margin-bottom: 10px;
 }
 .p-page-contact__form__textarea + textarea {
   display: block;
@@ -2603,6 +2601,21 @@ td.p-page-price__table__desc:last-of-type li::before {
   border: 1px solid #1B224C;
   padding: 5px 2%;
   font-size: 2rem;
+}
+
+.mwform-radio-field > label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 2;
+}
+.mwform-radio-field > label input[type=radio] {
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
 }
 
 .p-page-contact__consent {
