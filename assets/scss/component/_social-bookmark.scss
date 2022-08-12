@@ -1,0 +1,44 @@
+.wp_social_bookmarking_light {
+  border: 0 !important;
+  padding: 10px 0 20px 0 !important;
+  margin: 0 !important;
+  display: flex;
+  // iframe {
+  //   height: 20px !important;
+  // 	width:  auto !important;
+  // }
+}
+.wp_social_bookmarking_light div {
+  border: 0 !important;
+  padding: 0 !important;
+  margin: 0 5px 0px 0 !important;
+  min-height: 30px !important;
+  line-height: 18px !important;
+  text-indent: 0 !important;
+  // display: flex;
+  // align-items: center;
+}
+.wp_social_bookmarking_light img {
+  border: 0 !important;
+  padding: 0;
+  margin: 0;
+  vertical-align: middle !important;
+}
+
+.wsbl_twitter iframe {
+  width: 90px !important;
+}
+
+.wsbl_facebook_like{
+	width: 70px !important;
+}
+
+// #fb-root {
+//   display: none;
+// }
+// .wsbl_facebook_like iframe {
+//   max-width: none !important;
+// }
+// .wsbl_pinterest a {
+//   border: 0px !important;
+// }
