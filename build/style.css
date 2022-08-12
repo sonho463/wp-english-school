@@ -1212,13 +1212,14 @@ a:hover img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 25px;
 }
 
 .wp_social_bookmarking_light div {
   border: 0 !important;
   padding: 0 !important;
   margin: 0 5px 0px 0 !important;
-  min-height: 30px !important;
+  height: 25px !important;
   line-height: 18px !important;
   text-indent: 0 !important;
 }
@@ -2366,6 +2367,14 @@ td.p-page-price__table__desc:last-of-type li::before {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+.c-post__sns-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .c-post__image {
   margin-top: 22px;

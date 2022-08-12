@@ -27,7 +27,7 @@ get_template_part('includes/header');
 								</h1>
 								<div class="c-post__info-block">
 									<div class="c-post__sns-block">
-										<img src="./assets/images/sns-icon.png" alt="">
+										<?php wp_social_bookmarking_light_output_e(null, get_permalink(), the_title("", "", false)); ?>
 									</div>
 									<p class="c-post__date">
 										<?php the_time('Y-m-d') ?>

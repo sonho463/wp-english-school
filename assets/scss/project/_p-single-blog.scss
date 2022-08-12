@@ -25,6 +25,10 @@
     align-items: center;
     justify-content: space-between;
   }
+	&__sns-block{
+		display: flex;
+		align-items: center;
+	}
   &__image {
     margin-top: 22px;
     img {

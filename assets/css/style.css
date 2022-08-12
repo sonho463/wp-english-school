@@ -1096,13 +1096,14 @@ a:hover img {
   padding: 10px 0 20px 0 !important;
   margin: 0 !important;
   display: flex;
+  height: 25px;
 }
 
 .wp_social_bookmarking_light div {
   border: 0 !important;
   padding: 0 !important;
   margin: 0 5px 0px 0 !important;
-  min-height: 30px !important;
+  height: 25px !important;
   line-height: 18px !important;
   text-indent: 0 !important;
 }
@@ -2101,6 +2102,10 @@ td.p-page-price__table__desc:last-of-type li::before {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.c-post__sns-block {
+  display: flex;
+  align-items: center;
 }
 .c-post__image {
   margin-top: 22px;
