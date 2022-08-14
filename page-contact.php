@@ -16,9 +16,6 @@ get_template_part('includes/header');
 	</section>
 	<section class="p-page-contact">
 		<div class="c-inner">
-			<p class="p-page-contact__lead">
-				弊社に興味を持って頂きありがとうございます。商談やサービスのご利用、資料請求について下記のフォームよりお問い合わせください。
-			</p>
 			<?php the_content(); ?>
 		</div>
 	</section>
