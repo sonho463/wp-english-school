@@ -94,3 +94,64 @@ function mvwpform_autop_filter()
 	}
 }
 mvwpform_autop_filter();
+
+
+//pagination
+function pagination($pages = '', $range = 2)
+{
+	// var_dump($pages);
+	$showitems = ($range * 1) + 1;
+	global $paged;
+	if (empty($paged)) $paged = 1;
+	if ($pages == '') {
+		global $wp_query;
+		// var_dump($wp_query);
+		$pages = $wp_query->max_num_pages;
+		if (!$pages) {
+			$pages = 1;
+		}
+	};
+	// var_dump($pages);
+	if (1 != $pages) {
+		// 画像を使う時用に、テーマのパスを取得
+		// $img_pass = get_template_directory_uri();
+		// echo "<div class=\"nav-links nav-links__bg-yellow\">";
+		// 「1/2」表示 現在のページ数 / 総ページ数
+		// echo "<div class=\"m-pagenation__result\">". $paged."/". $pages."</div>";
+		// 「前へ」を表示
+		// if ($paged > 1) :
+		// 	echo "<div><a class=\"pagination_allow pagination_allow__left\"href='" . get_pagenum_link($paged - 1) . "'></a></div>";
+		// else :
+		// 	echo "<div><span class=\"pagination_allow pagination_allow__inactive pagination_allow__left\"></span></div>";
+		// endif;
+		// ページ番号を出力
+		echo "<ul class=\"c-pagination\">\n";
+		if ($pages > 3 && $paged != $pages && $paged != 1) :
+			for ($i = $paged - 1; $i <= $paged + 1; $i++) {
+				if (1 != $pages && (!($i >= $paged + $range + 1 || $i <= $paged - $range - 1) || $pages <= $showitems)) {
+					echo ($paged == $i) ? "<li class=\" -current\">" . $i . "</li>" : // 現在のページの数字はリンク無し
+						"<li><a href='" . get_pagenum_link($i) . "'>" . $i . "</a></li>";
+				}
+			}
+		else :
+			for ($i = 1; $i <= $pages; $i++) {
+				if (1 != $pages && (!($i >= $paged + $range + 1 || $i <= $paged - $range - 1) || $pages <= $showitems)) {
+					echo ($paged == $i) ? "<li class=\" -current\">" . $i . "</li>" : // 現在のページの数字はリンク無し
+						"<li><a href='" . get_pagenum_link($i) . "'>" . $i . "</a></li>";
+				}
+			}
+		endif;
+		// [...] 表示
+		if(($paged + 1 ) < $pages){ echo "<li class=\"c-pagination__number--omit\">...</li>";
+		echo "<li><a href='".get_pagenum_link($pages)."'>".$pages."</a></li>";
+		}
+		echo "</ul>\n";
+		// 「次へ」を表示
+		// if ($paged < $pages) : echo "<div><a class=\" pagination_allow\" href='" . get_pagenum_link($paged + 1) . "'></a></div>";
+		// else :
+		// 	echo "<div><span class=\"pagination_allow pagination_allow__inactive\"></span></div>";
+		// endif;
+
+		echo "</div>\n";
+	}
+}

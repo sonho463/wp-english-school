@@ -1068,7 +1068,7 @@ a:hover img {
   align-items: center;
   justify-content: center;
 }
-.c-pagination__number {
+.c-pagination > li {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1077,18 +1077,19 @@ a:hover img {
   border: 1px solid #1B224C;
   font-weight: bold;
 }
-.c-pagination__number + li {
+.c-pagination > li + li {
   margin-left: 19px;
 }
-.c-pagination__number--omit {
-  border: none;
-}
-.c-pagination__number__link {
+.c-pagination > li__link {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
+}
+
+li.c-pagination__number--omit {
+  border: none;
 }
 
 .wp_social_bookmarking_light {
