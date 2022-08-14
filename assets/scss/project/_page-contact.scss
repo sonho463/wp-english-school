@@ -34,7 +34,7 @@
   &__type-area {
     margin-top: 24px;
     &__desc {
-      // margin-bottom: 21px;
+      margin-bottom: 20px;
       span {
         font-weight: bold;
       }
@@ -84,6 +84,10 @@
 	margin-top: 30px;
 }
 
+.p-page-contact__privacy-link{
+	color: v.$main-secondary;
+}
+
 .p-page-contact__submit-button{
 	margin-top: 46px;
 	background-color: v.$main-primary;
@@ -98,10 +102,11 @@
 	.c-inner{
 		text-align: center;
 	}
-	&__text	{
-	}
 	&__back{
 		display: block;
 		margin-top: 83px;
 	}
+}
+.mw_wp_form .horizontal-item + .horizontal-item{
+	margin-left: 0 !important;
 }

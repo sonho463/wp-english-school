@@ -485,12 +485,12 @@ object {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: underline;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 a:hover img {
@@ -2582,6 +2582,9 @@ td.p-page-price__table__desc:last-of-type li::before {
 .p-page-contact__form__type-area {
   margin-top: 24px;
 }
+.p-page-contact__form__type-area__desc {
+  margin-bottom: 20px;
+}
 .p-page-contact__form__type-area__desc span {
   font-weight: bold;
 }
@@ -2636,6 +2639,10 @@ td.p-page-price__table__desc:last-of-type li::before {
   margin-top: 30px;
 }
 
+.p-page-contact__privacy-link {
+  color: #F5A623;
+}
+
 .p-page-contact__submit-button {
   margin-top: 46px;
   background-color: #1B224C;
@@ -2654,6 +2661,10 @@ td.p-page-price__table__desc:last-of-type li::before {
 .p-page-thanks__back {
   display: block;
   margin-top: 83px;
+}
+
+.mw_wp_form .horizontal-item + .horizontal-item {
+  margin-left: 0 !important;
 }
 
 .u-active-sp {

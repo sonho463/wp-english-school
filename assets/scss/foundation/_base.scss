@@ -34,10 +34,10 @@ object {
 
 a {
 	// color: v.$main-primary;
-	text-decoration: none;
+	text-decoration: underline;
 	transition: 0.3s;
 	&:hover {
-		text-decoration: underline;
+		text-decoration: none;
 	}
 }
 
