@@ -733,6 +733,11 @@ a:hover img {
   flex: 1;
   max-width: 70%;
 }
+@media screen and (max-width:1024px) {
+  .l-single-blog__main {
+    max-width: 100%;
+  }
+}
 .l-single-blog__aside {
   width: 30%;
   min-width: 150px;
@@ -2103,6 +2108,12 @@ td.p-page-price__table__desc:last-of-type li::before {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+@media screen and (max-width:1024px) {
+  .c-post__info-block {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 .c-post__sns-block {
   display: flex;

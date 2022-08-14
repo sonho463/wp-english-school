@@ -785,6 +785,11 @@ a:hover img {
           flex: 1;
   max-width: 70%;
 }
+@media screen and (max-width:1024px) {
+  .l-single-blog__main {
+    max-width: 100%;
+  }
+}
 .l-single-blog__aside {
   width: 30%;
   min-width: 150px;
@@ -2368,6 +2373,17 @@ td.p-page-price__table__desc:last-of-type li::before {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+@media screen and (max-width:1024px) {
+  .c-post__info-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
 }
 .c-post__sns-block {
   display: -webkit-box;

@@ -37,32 +37,10 @@ get_template_part('includes/ddMenu');
 				</div>
 			<?php endif; ?>
 			<ul class="c-pagination">
-				<li class="c-pagination__number">
-					<a href="#" class="c-pagination__number__link">
-						1
-					</a>
-				</li>
-				<li class="c-pagination__number">
-					<a href="#" class="c-pagination__number__link">
-						2
-					</a>
-				</li>
-				<li class="c-pagination__number">
-					<a href="#" class="c-pagination__number__link">
-						3
-					</a>
-				</li>
-				<li class="c-pagination__number c-pagination__number--omit">
-					<a href="#" class="c-pagination__number__link">
-						...
-					</a>
-				</li>
-				<li class="c-pagination__number">
-					<a href="#" class="c-pagination__number__link">
-						5
-					</a>
-				</li>
-
+				<?php
+				if (function_exists('pagination')) { // 関数が定義されていたらtrueになる
+					pagination();
+				} ?>
 			</ul>
 		</div>
 	</section>
