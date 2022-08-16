@@ -3,6 +3,7 @@
 .l-tel {
   height: auto;
   min-height: 80px;
+	position: relative;
   @include v.mq(lg) {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -12,6 +13,12 @@
 .p-tel {
   text-align: center;
   line-height: 80px;
+	.c-inner{
+		transform: translateX(-6%);
+		@include v.mq(lg){
+			transform: translateX(0);
+		}
+	}
   @include v.mq(lg) {
     line-height: 1.5;
     span {

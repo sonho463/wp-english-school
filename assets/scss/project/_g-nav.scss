@@ -1,7 +1,7 @@
 @use "../foundation/variables" as v;
 
 .p-g-nav {
-  margin-left: 20px;
+  margin-left: 30px;
 	margin-right: auto;
   @include v.mq(lg) {
 		background-color: v.$color-white;
@@ -28,12 +28,8 @@
   display: flex;
   align-items: center;
   font-weight: bold;
-  gap: 23px;
+  gap: 28px;
   @include v.mq(lg) {
     display: block;
   }
-}
-
-.p-g-nav__item + li {
-  // margin-left: 23px;
 }

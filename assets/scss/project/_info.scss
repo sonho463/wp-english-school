@@ -23,12 +23,19 @@
   &__heading {
     font-size: 3.2rem;
     font-weight: bold;
-    padding-bottom: 30px;
+    padding-bottom: 22px;
     border-top: 3px solid v.$main-primary;
     @include v.mq(lg) {
       padding-bottom: 8px;
     }
   }
+	.c-info__blog__image{
+		height: 100%;
+		img{
+			height: 100%;
+			object-fit: cover;
+		}
+	}
 }
 
 // .p-info__blog {

@@ -3,7 +3,7 @@
 .l-success {
   background-color: v.$main-primary;
   color: v.$color-white;
-  padding-top: 58px;
+  padding-top: 48px;
   padding-bottom: 60px;
 }
 
@@ -12,6 +12,14 @@
   font-weight: bold;
 }
 
+.p-success__list {
+	margin-top: 115px;
+	margin-left: auto;
+	margin-right: auto;
+	@include v.mq(lg) {
+		margin-top: 60px;
+	}
+}
 .p-success__list__inner {
   display: flex;
   gap: 30px;
@@ -20,14 +28,6 @@
   }
 }
 
-.p-success__list {
-  margin-top: 137px;
-  margin-left: auto;
-  margin-right: auto;
-  @include v.mq(lg) {
-    margin-top: 60px;
-  }
-}
 
 .p-success__item {
   width: 30.9%;
@@ -40,7 +40,7 @@
     padding-right: 5%;
   }
   &__info {
-    margin-top: 16px;
+    margin-top: 13px;
   }
   &__info-row {
     display: flex;
@@ -82,5 +82,5 @@
 }
 
 .p-success__outcome {
-  margin-top: 16px;
+  margin-top: 12px;
 }

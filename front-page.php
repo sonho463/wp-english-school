@@ -236,16 +236,10 @@ get_template_part('includes/header');
 							<h3 class="p-faq__question">
 								<span class="p-faq__question__text">
 									Engressはサラリーマンでも学習を続けられるでしょうか？
-									Engressはサラリーマンでも学習を続けられるでしょうか？
-									Engressはサラリーマンでも学習を続けられるでしょうか？Engressはサラリーマンでも学習を続けられるでしょうか？Engressはサラリーマンでも学習を続けられるでしょうか？
 								</span>
 							</h3>
 							<p class="p-faq__answer js-faq-answer">
 								<span class="p-faq__answer__text">
-									Engressは各個人に最適な学習プランをご提供しております。サラリーマンの方でも継続できます。
-									Engressは各個人に最適な学習プランをご提供しております。サラリーマンの方でも継続できます。
-									Engressは各個人に最適な学習プランをご提供しております。サラリーマンの方でも継続できます。
-									Engressは各個人に最適な学習プランをご提供しております。サラリーマンの方でも継続できます。
 									Engressは各個人に最適な学習プランをご提供しております。サラリーマンの方でも継続できます。
 								</span>
 							</p>

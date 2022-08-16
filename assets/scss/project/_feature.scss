@@ -1,25 +1,31 @@
 @use "../foundation/variables" as v;
 .l-feature {
-  padding-top: 59px;
+  padding-top: 54px;
   padding-bottom: 39px;
 }
 
 .p-feature__articles {
-  margin-top: 59px;
+  margin-top: 44px;
 }
 
 .p-feature__article {
   &__heading {
-    // margin-top: 45px;
+    margin-top: 29px;
     font-weight: bold;
     font-size: 2.6rem;
     line-height: 1.5;
   }
   &__desc {
-    // margin-top: 39px;
+    margin-top: 28px;
     font-size: 1.6rem;
     line-height: 1.68;
   }
+}
+// ３番めのfeatureだけちょっと調整
+.p-feature__item:nth-of-type(3){
+	.p-feature__article__desc{
+		margin-top: 36px;
+	}
 }
 
 .p-feature__item {
@@ -32,16 +38,16 @@
     padding-left: 5%;
   }
   & + li {
-    margin-top: 60px;
+    margin-top: 55px;
   }
   &:nth-of-type(even) {
     flex-direction: row-reverse;
   }
   &__text-block {
     flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: space-between;
   }
   &__image {
     // width: 27.3%;

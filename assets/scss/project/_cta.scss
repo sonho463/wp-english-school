@@ -15,10 +15,11 @@
 }
 
 .p-cta {
-  height: inherit;
+  height: 100%;
 }
 
 .p-cta .c-inner {
+	padding-top: 38px;
   height: inherit;
   display: flex;
   flex-direction: column;

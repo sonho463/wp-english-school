@@ -3,7 +3,7 @@
 .l-intro {
   background-color: v.$main-primary;
   color: v.$color-white;
-  padding-top: 63px;
+  padding-top: 52px;
   padding-bottom: 54px;
 }
 
@@ -13,7 +13,7 @@
     justify-content: space-between;
     align-items: center;
     width: 61%;
-    margin-top: 65px;
+    margin-top: 45px;
     margin-left: auto;
     margin-right: auto;
     @include v.mq(lg) {
@@ -35,18 +35,21 @@
 }
 
 .p-intro__intro {
-  margin-top: 83px;
-  padding: 11px 16px;
+  margin-top: 84px;
+  padding: 13px 23px;
   background-color: v.$color-white;
   &__inner {
     outline: v.$main-primary 5px solid;
-    padding: 20px 0;
+    padding: 9px 0;
+		padding-top: 9px;
+		padding-bottom: 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
   &__heading {
     position: relative;
+		line-height: 1.4;
   }
   &__heading span::after {
     z-index: -1;
@@ -62,6 +65,8 @@
     text-align: center;
     margin-top: 25px;
     color: v.$main-primary;
+		letter-spacing: .12em;
+		line-height: 1.8;
     @include v.mq(lg) {
       text-align: justify;
       padding-left: 5%;

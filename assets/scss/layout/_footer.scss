@@ -23,7 +23,8 @@
 }
 
 .l-footer__menu {
-  padding-top: 49px;
+  padding-top: 38px;
+	padding-left: 7px;
   @include v.mq(lg) {
     padding-top: 0;
   }
@@ -43,7 +44,7 @@
   }
   &__item + li {
     border-left: solid 1px v.$color-white;
-    padding-left: 21px;
+    padding-left: 27px;
     @include v.mq(lg) {
       margin-top: 4px;
       padding-left: 0;
@@ -53,7 +54,8 @@
 }
 
 .l-footer__right {
-  padding-top: 35px;
+  padding-top: 30px;
+	margin-right: -17px;
   @include v.mq(lg) {
     padding-top: 0;
   }
