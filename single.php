@@ -34,7 +34,11 @@ get_template_part('includes/header');
 									</p>
 								</div>
 								<figure class="c-post__image">
-									<img src="./assets/images/sample01.jpg" alt="">
+									<?php if (has_post_thumbnail()) : ?>
+										<?php the_post_thumbnail(); ?>
+									<?php else : ?>
+										<img src="<?php echo get_template_directory_uri(); ?>/assets/images/default.png" alt="">
+									<?php endif; ?>
 								</figure>
 								<section class="c-post__article">
 									<?php
