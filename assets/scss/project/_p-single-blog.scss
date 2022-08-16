@@ -102,6 +102,25 @@
   a {
     color: v.$main-secondary;
   }
+	.post-password-form{
+		p + p{
+			margin-top: 30px;
+		}
+		input[type="password"]{
+			display: inline-block;
+			border: 1px solid v.$main-primary;
+			height: 30px;
+
+		}
+		input[type="submit"]{
+			width: 100px;
+			height: 30px;
+			text-align: center;
+			background-color: v.$main-primary;
+			color: v.$color-white;
+		}
+
+	}
 }
 
 .p-single-blog__recommend {

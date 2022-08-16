@@ -2503,6 +2503,21 @@ td.p-page-price__table__desc:last-of-type li::before {
 .c-post__article a {
   color: #F5A623;
 }
+.c-post__article .post-password-form p + p {
+  margin-top: 30px;
+}
+.c-post__article .post-password-form input[type=password] {
+  display: inline-block;
+  border: 1px solid #1B224C;
+  height: 30px;
+}
+.c-post__article .post-password-form input[type=submit] {
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  background-color: #1B224C;
+  color: #fff;
+}
 
 .p-single-blog__recommend {
   margin-top: 60px;
