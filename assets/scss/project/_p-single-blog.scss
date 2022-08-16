@@ -84,6 +84,7 @@
   .c-post__block-image {
     margin-bottom: 30px;
     img {
+			max-width: unset;
       width: 100%;
     }
   }

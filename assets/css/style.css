@@ -2213,6 +2213,7 @@ td.p-page-price__table__desc:last-of-type li::before {
   margin-bottom: 30px;
 }
 .c-post__article .c-post__block-image img {
+  max-width: unset;
   width: 100%;
 }
 .c-post__article ul {
