@@ -60,6 +60,9 @@
     height: 9px;
     width: 84%;
     background-color: v.$main-secondary;
+		@include v.mq(lg){
+			bottom:7px;
+		}
   }
   &__desc {
     text-align: center;
