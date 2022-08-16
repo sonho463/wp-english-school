@@ -3,6 +3,7 @@
 .p-g-nav {
   margin-left: 30px;
 	margin-right: auto;
+
   @include v.mq(lg) {
 		background-color: v.$color-white;
     display: none;

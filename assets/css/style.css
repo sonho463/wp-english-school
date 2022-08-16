@@ -484,6 +484,14 @@ a:hover {
   text-decoration: none;
 }
 
+.l-header a {
+  text-decoration: none;
+  transition: 0.3s;
+}
+.l-header a:hover {
+  text-decoration: underline;
+}
+
 a:hover img {
   text-decoration: none;
   opacity: 0.8;
