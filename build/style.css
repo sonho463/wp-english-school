@@ -1425,6 +1425,11 @@ li.c-pagination__number--omit {
   width: 84%;
   background-color: #F5A623;
 }
+@media screen and (max-width:1024px) {
+  .p-intro__intro__heading span::after {
+    bottom: 7px;
+  }
+}
 .p-intro__intro__desc {
   text-align: center;
   margin-top: 25px;
