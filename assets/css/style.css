@@ -1023,6 +1023,7 @@ a:hover img {
 }
 .c-info__blog__item .c-info__blog__link {
   display: flex;
+  height: inherit;
 }
 @media screen and (max-width:1024px) {
   .c-info__blog__item .c-info__blog__link {

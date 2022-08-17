@@ -311,7 +311,11 @@ get_template_part('includes/header');
 												?>
 											</span>
 											<figure class="c-info__blog__image">
-												<img src="<?php echo get_template_directory_uri(); ?>/assets/images/sample01.jpg" alt="">
+												<?php if (has_post_thumbnail()) : ?>
+													<?php the_post_thumbnail(); ?>
+												<?php else : ?>
+													<img src="<?php echo get_template_directory_uri(); ?>/assets/images/default.png" alt="">
+												<?php endif; ?>
 											</figure>
 										</div>
 										<div class="c-info__blog__text-block">
@@ -341,14 +345,14 @@ get_template_part('includes/header');
 								setup_postdata($post); // 記事データの取得
 							?>
 								<li class="p-info__information__item">
-									<a href="<?php the_permalink();?>">
+									<a href="<?php the_permalink(); ?>">
 										<p class="p-info__information__date">
 											<?php the_time('Y-m-d'); ?>
 										</p>
 										<p class="p-info__information__title">
 											<?php the_title(); ?>
 										</p>
-								</a>
+									</a>
 								</li>
 							<?php endforeach; ?>
 

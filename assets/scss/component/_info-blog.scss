@@ -12,6 +12,7 @@
   }
   &__item .c-info__blog__link {
     display: flex;
+		height: inherit;
     @include v.mq(lg) {
       flex-direction: column;
     }

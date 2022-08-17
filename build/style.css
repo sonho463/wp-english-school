@@ -1108,6 +1108,7 @@ a:hover img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: inherit;
 }
 @media screen and (max-width:1024px) {
   .c-info__blog__item .c-info__blog__link {
