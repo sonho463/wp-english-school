@@ -7,13 +7,13 @@
 						<a href="/" class="l-footer__menu__link">ホーム</a>
 					</li>
 					<li class="l-footer__menu__item">
-						<a href="/archive-news.html" class="l-footer__menu__link">お知らせ</a>
+						<a href="/news" class="l-footer__menu__link">お知らせ</a>
 					</li>
 					<li class="l-footer__menu__item">
-						<a href="/archive-blog.html" class="l-footer__menu__link">ブログ</a>
+						<a href="/posts" class="l-footer__menu__link">ブログ</a>
 					</li>
 					<li class="l-footer__menu__item">
-						<a href="/price.html" class="l-footer__menu__link">コース・料金</a>
+						<a href="/price" class="l-footer__menu__link">コース・料金</a>
 
 					</li>
 				</ul>

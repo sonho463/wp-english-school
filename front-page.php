@@ -15,11 +15,11 @@ get_template_part('includes/header');
 					</p>
 				</div>
 				<div class="p-mv__button">
-					<a href="#" class="c-button">
+					<a href="/contact" class="c-button">
 						<span class="c-button__text">資料請求</span>
 					</a>
 				</div>
-				<a class="c-link-contact">
+				<a href="/contact" class="c-link-contact">
 					<span class="c-link-contact__text">
 						お問い合わせ
 					</span>
