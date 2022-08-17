@@ -35,6 +35,11 @@ get_template_part('includes/ddMenu');
 						</ul>
 					<?php endwhile; ?>
 				</div>
+			<?php else : ?>
+				<p style="
+				text-align: center;
+				margin-top: 30px;
+				font-size: 2.4rem;">表示する投稿がありません</p>
 			<?php endif; ?>
 			<ul class="c-pagination">
 				<?php

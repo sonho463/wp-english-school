@@ -49,6 +49,8 @@ get_template_part('includes/header');
 
 						</section>
 					<?php endwhile; ?>
+				<?php else : ?>
+					<p>表示する投稿がありません</p>
 				<?php endif; ?>
 				<?php wp_reset_postdata(); ?>
 				<section class="p-single-blog__recommend">
@@ -63,6 +65,7 @@ get_template_part('includes/header');
 							// 'orderby' => 'rand' //ランダムで取得
 						);
 						$recommend_query = new WP_Query($args);
+						// var_dump($recommend_query);
 						?>
 						<ul class="c-info__blog__list">
 							<?php if ($recommend_query->have_posts()) : ?>
@@ -95,6 +98,11 @@ get_template_part('includes/header');
 										</a>
 									</li>
 								<?php endwhile; ?>
+							<?php else : ?>
+								<p style="
+				text-align: center;
+				margin-top: 30px;
+				font-size: 2.4rem;">表示する投稿がありません</p>
 							<?php endif; ?>
 						</ul>
 					</div>
@@ -120,34 +128,38 @@ get_template_part('includes/header');
 					);
 					$related_query = new WP_Query($args);
 					?>
-					<ul class="c-info__blog__list">
-						<?php while ($related_query->have_posts()) : $related_query->the_post(); ?>
-							<li class="c-info__blog__item">
-								<a class="c-info__blog__link" href="<?php the_permalink() ?>">
-									<div class="c-info__blog__image-block">
-										<span class="c-info__blog__category">
-											<?php
-											$category = get_the_category();
-											echo $category[0]->cat_name;
-											?>
-										</span>
-										<figure class="c-info__blog__image">
-											<?php if (has_post_thumbnail()) : ?>
-												<?php the_post_thumbnail(); ?>
-											<?php else : ?>
-												<img src="<?php echo get_template_directory_uri(); ?>/assets/images/default.png" alt="">
-											<?php endif; ?>
-										</figure>
-									</div>
-									<div class="c-info__blog__text-block">
-										<p class="c-info__blog__title">
-											<?php the_title(); ?>
-										</p>
-									</div>
-								</a>
-							</li>
-						<?php endwhile; ?>
-					</ul>
+					<?php if ($related_query->have_posts()) : ?>
+						<ul class="c-info__blog__list">
+							<?php while ($related_query->have_posts()) : $related_query->the_post(); ?>
+								<li class="c-info__blog__item">
+									<a class="c-info__blog__link" href="<?php the_permalink() ?>">
+										<div class="c-info__blog__image-block">
+											<span class="c-info__blog__category">
+												<?php
+												$category = get_the_category();
+												echo $category[0]->cat_name;
+												?>
+											</span>
+											<figure class="c-info__blog__image">
+												<?php if (has_post_thumbnail()) : ?>
+													<?php the_post_thumbnail(); ?>
+												<?php else : ?>
+													<img src="<?php echo get_template_directory_uri(); ?>/assets/images/default.png" alt="">
+												<?php endif; ?>
+											</figure>
+										</div>
+										<div class="c-info__blog__text-block">
+											<p class="c-info__blog__title">
+												<?php the_title(); ?>
+											</p>
+										</div>
+									</a>
+								</li>
+							<?php endwhile; ?>
+						</ul>
+					<?php else : ?>
+						<p>関連記事はありません。</p>
+					<?php endif; ?>
 
 				</section>
 				<section class="p-single-blog__category">

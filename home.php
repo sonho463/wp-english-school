@@ -57,12 +57,18 @@ get_template_part('includes/header');
 						<?php endwhile; ?>
 					</ul>
 				</div>
+			<?php else : ?>
+				<p
+				style="
+				text-align: center;
+				margin-top: 30px;
+				font-size: 2.4rem;">表示する投稿がありません</p>
 			<?php endif; ?>
 			<ul class="c-pagination">
-			<?php
-			if (function_exists('pagination')) { // 関数が定義されていたらtrueになる
-				pagination();
-			} ?>
+				<?php
+				if (function_exists('pagination')) { // 関数が定義されていたらtrueになる
+					pagination();
+				} ?>
 			</ul>
 		</div>
 

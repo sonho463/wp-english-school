@@ -297,39 +297,42 @@ get_template_part('includes/header');
 								'post_type' => 'post',
 							);
 							$posts = get_posts($args);
-							foreach ($posts as $post) : // ループの開始
-								setup_postdata($post); // 記事データの取得
+							if ($posts) :
+								foreach ($posts as $post) : // ループの開始
+									setup_postdata($post); // 記事データの取得
 							?>
-								<li class="c-info__blog__item">
-									<a class="c-info__blog__link" href="<?php the_permalink(); ?>">
+									<li class="c-info__blog__item">
+										<a class="c-info__blog__link" href="<?php the_permalink(); ?>">
 
-										<div class="c-info__blog__image-block">
-											<span class="c-info__blog__category">
-												<?php
-												$category = get_the_category();
-												echo $category[0]->cat_name;
-												?>
-											</span>
-											<figure class="c-info__blog__image">
-												<?php if (has_post_thumbnail()) : ?>
-													<?php the_post_thumbnail(); ?>
-												<?php else : ?>
-													<img src="<?php echo get_template_directory_uri(); ?>/assets/images/default.png" alt="">
-												<?php endif; ?>
-											</figure>
-										</div>
-										<div class="c-info__blog__text-block">
-											<p class="c-info__blog__title">
-												<?php the_title(); ?>
-											</p>
-											<p class="c-info__blog__date">
-												<?php the_time('Y-m-d') ?>
-											</p>
-										</div>
-									</a>
-								</li>
-							<?php endforeach; ?>
-
+											<div class="c-info__blog__image-block">
+												<span class="c-info__blog__category">
+													<?php
+													$category = get_the_category();
+													echo $category[0]->cat_name;
+													?>
+												</span>
+												<figure class="c-info__blog__image">
+													<?php if (has_post_thumbnail()) : ?>
+														<?php the_post_thumbnail(); ?>
+													<?php else : ?>
+														<img src="<?php echo get_template_directory_uri(); ?>/assets/images/default.png" alt="">
+													<?php endif; ?>
+												</figure>
+											</div>
+											<div class="c-info__blog__text-block">
+												<p class="c-info__blog__title">
+													<?php the_title(); ?>
+												</p>
+												<p class="c-info__blog__date">
+													<?php the_time('Y-m-d') ?>
+												</p>
+											</div>
+										</a>
+									</li>
+								<?php endforeach; ?>
+							<?php else : ?>
+								<li>表示する投稿がありません。</li>
+							<? endif; ?>
 						</ul>
 					</div>
 					<div class="p-info__information">
@@ -341,21 +344,24 @@ get_template_part('includes/header');
 								'post_type' => 'news',
 							);
 							$posts = get_posts($args);
-							foreach ($posts as $post) : // ループの開始
-								setup_postdata($post); // 記事データの取得
+							if ($posts) :
+								foreach ($posts as $post) : // ループの開始
+									setup_postdata($post); // 記事データの取得
 							?>
-								<li class="p-info__information__item">
-									<a href="<?php the_permalink(); ?>">
-										<p class="p-info__information__date">
-											<?php the_time('Y-m-d'); ?>
-										</p>
-										<p class="p-info__information__title">
-											<?php the_title(); ?>
-										</p>
-									</a>
-								</li>
-							<?php endforeach; ?>
-
+									<li class="p-info__information__item">
+										<a href="<?php the_permalink(); ?>">
+											<p class="p-info__information__date">
+												<?php the_time('Y-m-d'); ?>
+											</p>
+											<p class="p-info__information__title">
+												<?php the_title(); ?>
+											</p>
+										</a>
+									</li>
+								<?php endforeach; ?>
+							<?php else : ?>
+								<li>表示する投稿がありません。</li>
+							<? endif; ?>
 						</ul>
 					</div>
 				</div>
